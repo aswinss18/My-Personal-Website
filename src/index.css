@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.element::after {
+  content: " "; /* You can change this to your desired content */
+  display: inline-block; /* Ensure it displays inline */
+  width: 10px; /* Adjust size as needed */
+  height: 10px; /* Adjust size as needed */ /* Use a Tailwind color or your own */
+  border-radius: 50%; /* Make it circular */
+  margin-left: 0.5rem;
+  /* Apply Tailwind classes here */
+  @apply bg-gray-400;
+}
