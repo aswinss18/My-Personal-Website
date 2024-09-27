@@ -7,8 +7,8 @@ export default function Footer() {
     <div
       className={
         isLightMode
-          ? "bg-white  border-t-2 border-gray-300 w-auto min-h-60 flex flex-col"
-          : "bg-gray-950  border-t-2 border-gray-100 w-auto min-h-60 flex flex-col"
+          ? "bg-white fixed bottom-0 right-0 left-0 border-t-2 border-gray-300 w-auto min-h-60 flex flex-col"
+          : "bg-gray-950 fixed bottom-0 right-0 left-0  border-t-2 border-gray-100 w-auto min-h-60 flex flex-col"
       }
     >
       <div className="mx-auto">
