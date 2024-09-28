@@ -14,14 +14,14 @@ export default function Service({ data }) {
     >
       <div className="w-10 h-10    mt-3 mx-auto">
         {isLightMode ? (
-          <img src="public/images/web-white.svg" alt="web" />
+          <img src={data.iconLight} alt="web" />
         ) : (
-          <img src="public/images/web-black.svg" alt="web" />
+          <img src={data.iconDark} alt="web" />
         )}
       </div>
       <div>
         <h2 className="mt-1 font-bold text-md ">{data.name}</h2>
-        <p className="text-[12px] text-gray-500">{data.no}</p>
+        <p className="text-[12px] text-gray-500">{data.no} PROJECTS</p>
         <p className="h-fit w-fit text-sm px-2 py-1 font-normal">{data.desc}</p>
       </div>
     </div>

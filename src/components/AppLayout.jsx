@@ -13,7 +13,7 @@ export default function AppLayout() {
   return (
     <MyContext.Provider value={{ isLightMode, setLightMode, handleTheme }}>
       <div
-        className={`flex flex-col relative ${
+        className={`flex flex-col relative  ${
           isLightMode
             ? "bg-white text-gray-950 border-gray-300"
             : " bg-gray-950 border-gray-100 text-white"

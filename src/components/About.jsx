@@ -10,7 +10,8 @@ export const styleSubHeading = `mt-2 text-sm font-semibold md:text-lg lg:text-xl
 const services = [
   {
     name: "Web Development",
-    icon: "",
+    iconLight: "public/images/web-white.svg",
+    iconDark: "public/images/web-black.svg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
     iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
     laudantium veniam`,
@@ -19,7 +20,8 @@ const services = [
 
   {
     name: "App Development",
-    icon: "",
+    iconLight: "public/images/code-white.svg",
+    iconDark: "public/images/code-black.svg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
     iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
     laudantium veniam`,
@@ -27,7 +29,8 @@ const services = [
   },
   {
     name: "UI UX Design",
-    icon: "",
+    iconLight: "public/images/pen-black.svg",
+    iconDark: "public/images/pen-white.svg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
     iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
     laudantium veniam`,
@@ -35,7 +38,8 @@ const services = [
   },
   {
     name: "Graphic Design",
-    icon: "",
+    iconLight: "public/images/palette-black.svg",
+    iconDark: "public/images/palette-white.svg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
     iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
     laudantium veniam`,
@@ -92,10 +96,10 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col items-center">
+      <div className="mt-4 flex flex-col items-center mb-10">
         <h1 className={styleMainHeading}>Services</h1>
         <div>
-          <span>
+          <span className="flex flex-col items-center sm:flex-row sm:justify-evenly flex-wrap w-[90vw]">
             {services.map((item) => (
               <Service data={item} />
             ))}

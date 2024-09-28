@@ -129,7 +129,7 @@ export default function Footer() {
           <h3
             className={
               isLightMode
-                ? "hidden  sm:block text-md font-semibold hover:underline  ml-[-1.4rem] pt-1"
+                ? "hidden  sm:block text-md font-semibold hover:underline  ml-[-1.4rem] pt-1 "
                 : "hidden sm:block text-md font-semibold hover:underline  ml-[-1.4rem] pt-1 text-white"
             }
           >
