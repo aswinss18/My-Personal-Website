@@ -9,38 +9,39 @@ export default function HeroSection() {
     <div
       className={
         +isLightMode
-          ? "flex bg-white text-gray-950 h-[75vh] "
-          : "flex bg-gray-950 text-white h-[75vh]"
+          ? "flex  flex-col  border-2 border-red-600   bg-white text-gray-950 h-[100vh] w-[100vw] md:flex-row-reverse"
+          : "flex    flex-col border-2 border-red-600  bg-gray-950 text-white h-[100vh] w-[100vw] md:flex-row-reverse"
       }
     >
-      <div className="px-3 py-6 sm:px-12 sm:py-16 w-full  ml-8 sm:ml-16  flex flex-col justify-center my-auto space-y-3 h-[80vh]">
-        <div>
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold">
-            I'm Aswin S S
-          </h1>
-        </div>
-        <div>
-          <h3 className="text-md sm:text-xl md:text-2xl font-semibold">
-            I'm a <span className="font-bold">UI Developer </span>
-          </h3>
-        </div>
-        <div>
-          <p className="text-sm sm:text-xl md:text-2xl mb-5 md:pr-36">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem
-            non in ex vero obcaecati cum ducimus esse accusamus itaque!
-          </p>
-        </div>
-        <div className="space-x-2 flex ">
-          <Button type="primary">Resume</Button>
-          <Button type="secondary">Portfolio</Button>
-        </div>
-      </div>
-      <div className="my-auto mr-12 sm:mr-24 md:mr-40 rounded-3xl   overflow-hidden ">
+      <div className="w-[12rem] h-[12rem] mt-[6rem] mb-[1rem] mx-auto border-2 border-red-600   rounded-3xl overflow-hidden md:mt-[12rem] md:mr-[7rem] md:w-[15rem] md:h-[15rem] lg:w-[17rem] lg:h-[17rem] lg:mr-[12rem]">
         <img
           src="/public/images/Avatar.jpeg"
           className="w-full h-full"
           alt=""
         />
+      </div>
+      <div className="p-4  mx-[1rem] space-y-2 sm:mx-[4rem] md:w-[50vw] md:h-[100vh] md:px-0 md:mt-[10rem] lg:ml-[7rem] lg:space-y-5">
+        <div>
+          <h1 className="text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl ">
+            I'm Aswin S S
+          </h1>
+        </div>
+        <div>
+          <h3 className="font-semibold sm:text-xl md:text-2xl lg:text-3xl">
+            I'm a <span className="font-bold">UI Developer </span>
+          </h3>
+        </div>
+        <div>
+          <p className="font-normal sm:text-xl mb-4 md:text-2xl">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem
+            non in ex vero obcaecati cum ducimus esse accusamus itaque! Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Officia enim
+          </p>
+        </div>{" "}
+        <div className="lg:space-x-5 ">
+          <Button type="primary">Resume</Button>
+          <Button type="secondary">Portfolio</Button>
+        </div>
       </div>
     </div>
   );
