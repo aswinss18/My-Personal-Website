@@ -9,30 +9,35 @@ export default function HeroSection() {
     <div
       className={
         +isLightMode
-          ? "flex  flex-col  border-2 border-red-600   bg-white text-gray-950 h-[100vh] w-[100vw] md:flex-row-reverse"
-          : "flex    flex-col border-2 border-red-600  bg-gray-950 text-white h-[100vh] w-[100vw] md:flex-row-reverse"
+          ? "flex  flex-col     bg-white text-gray-950 h-[100vh] w-[100vw] md:flex-row-reverse"
+          : "flex    flex-col  bg-gray-950 text-white h-[100vh] w-[100vw] md:flex-row-reverse"
       }
     >
-      <div className="w-[12rem] h-[12rem] mt-[6rem] mb-[1rem] mx-auto border-2 border-red-600   rounded-3xl overflow-hidden md:mt-[12rem] md:mr-[7rem] md:w-[15rem] md:h-[15rem] lg:w-[17rem] lg:h-[17rem] lg:mr-[12rem]">
+      <div className="w-[12rem] border-[0.35rem] border-white h-[12rem] mt-[10rem] mb-[1rem] mx-auto   rounded-3xl overflow-hidden md:mt-[12rem] md:mr-[7rem] md:w-[15rem] md:h-[15rem] lg:w-[17rem] lg:h-[17rem] lg:mr-[12rem]">
         <img
           src="/public/images/Avatar.jpeg"
-          className="w-full h-full"
+          className="w-cover h-full"
           alt=""
         />
       </div>
-      <div className="p-4  mx-[1rem] space-y-2 sm:mx-[4rem] md:w-[50vw] md:h-[100vh] md:px-0 md:mt-[10rem] lg:ml-[7rem] lg:space-y-5">
+      <div
+        className="flex flex-col items-center sm:items-start
+      
+      
+      p-4  mx-[1rem] space-y-2 sm:mx-[4rem] md:w-[50vw] md:h-[100vh] md:px-0 md:mt-[10rem] lg:ml-[7rem] lg:mt-[12rem] lg:space-y-5 "
+      >
         <div>
           <h1 className="text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl ">
             I'm Aswin S S
           </h1>
         </div>
         <div>
-          <h3 className="font-semibold sm:text-xl md:text-2xl lg:text-3xl">
+          <h3 className="font-semibold sm:text-xl md:text-2xl lg:text-3xl ">
             I'm a <span className="font-bold">UI Developer </span>
           </h3>
         </div>
         <div>
-          <p className="font-normal sm:text-xl mb-4 md:text-2xl">
+          <p className="font-normal sm:text-xl mb-4 md:text-2xl w-[70vw] sm:w-[50vw]  text-center sm:text-left">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem
             non in ex vero obcaecati cum ducimus esse accusamus itaque! Lorem
             ipsum dolor, sit amet consectetur adipisicing elit. Officia enim
