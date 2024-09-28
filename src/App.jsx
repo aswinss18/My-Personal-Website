@@ -14,8 +14,7 @@ const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
-      { path: "/", element: <Navigate to="/home" replace /> },
-      { path: "/home", element: <HeroSection /> },
+      { path: "/", element: <HeroSection /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
       { path: "/portfolio", element: <Portfolio /> },

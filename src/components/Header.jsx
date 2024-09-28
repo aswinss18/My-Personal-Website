@@ -13,23 +13,21 @@ export default function Header() {
           : "border-b-2 bg-gray-950 fixed top-0 z-10 right-0 left-0 border-gray-100 py-5 flex justify-evenly h-[3.5rem] items-center"
       }
     >
-      {isLightMode ? (
-        <div className="sm:hidden w-6 h-6">
+      <div className="sm:hidden w-6 h-6">
+        {isLightMode ? (
           <img
             src="/public/images/bars-solid.svg"
             className="w-full h-full"
             alt=""
           />
-        </div>
-      ) : (
-        <div className="sm:hidden w-7 h-5">
+        ) : (
           <img
-            src="/public/images/menubar.png"
+            src="/public/images/menu-white.svg"
             className="w-full h-full"
             alt=""
           />
-        </div>
-      )}
+        )}
+      </div>
 
       <div
         className={

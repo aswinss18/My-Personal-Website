@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="w-[12rem] border-[0.35rem] border-white h-[12rem] mt-[10rem] mb-[1rem] mx-auto   rounded-3xl overflow-hidden md:mt-[12rem] md:mr-[7rem] md:w-[15rem] md:h-[15rem] lg:w-[17rem] lg:h-[17rem] lg:mr-[12rem]">
         <img
           src="/public/images/Avatar.jpeg"
-          className="w-cover h-full"
+          className="w-full h-full"
           alt=""
         />
       </div>
