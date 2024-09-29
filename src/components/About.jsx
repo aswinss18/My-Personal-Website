@@ -96,10 +96,10 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col items-center mb-10">
+      <div className="mt-4 flex flex-col items-center mt-5 mb-10">
         <h1 className={styleMainHeading}>Services</h1>
         <div>
-          <span className="flex flex-col items-center sm:flex-row sm:justify-evenly flex-wrap w-[90vw]">
+          <span className="flex flex-col items-center sm:flex-row sm:justify-evenly mt-5 flex-wrap w-[90vw]">
             {services.map((item) => (
               <Service data={item} />
             ))}
