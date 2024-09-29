@@ -3,7 +3,7 @@ import Button from "./Button";
 import { MyContext } from "./AppLayout";
 
 const MyDetails = {
-  address: `dhgasdhgsadfhliasdfhilwehj dfoijudsi`,
+  address: `Neyyattinkara, Trivandrum, Kerala`,
   phone: 9074873377,
   countrycode: 91,
   email: `aswinss0018@gmail.com`,
@@ -99,10 +99,10 @@ export default function Contact() {
                 placeholder="Name"
                 required
               />
-              <input
+              <textarea
                 type="text"
                 placeholder="Message"
-                className="border-2 px-4 py-1 rounded-3xl w-[100%] h-[10rem]"
+                className="border-2 px-4 py-1 rounded-3xl w-[100%] h-[10rem] placeholder:pt-1 "
                 required
               />
             </div>
