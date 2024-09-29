@@ -20,23 +20,33 @@ export default function Contact() {
   const styleDetails = `text-sm`;
 
   return (
-    <div className="border-2 border-red-500 w-[100vw] h-fit flex flex-col mt-[5rem] ">
-      <div className="border-2 border-red-500 ">
-        <h1 className="text-center py-4 text-2xl font-bold">Contact Me</h1>
-        <p className="text-center px-[1rem] pb-10">
+    <div className=" w-[100vw] h-fit flex flex-col mt-[5rem] ">
+      <div className="border-b-2">
+        <h1 className="text-center py-4 text-2xl font-bold md:text-3xl ">
+          Contact Me
+        </h1>
+        <p className="text-center px-[1rem] pb-10 md:px-[5rem] md:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum
           iste non, provident quibusdam animi numquam sed ea dolor ab.
         </p>
       </div>
-      <div className="flex flex-col items-center">
-        <div className="border-t-2  flex flex-col items-center ">
-          <h2 className="text-center py-4 text-xl font-bold">Get in Touch</h2>
-          <p className="text-center px-[1rem] pb-5">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            aliquam blanditiis voluptas ipsum maxime mollitia vero nostrum sit
-            provident eius.
-          </p>
-          <div className="px-7 flex flex-col pt-5 border-2 rounded-3xl  items-start w-[75vw] space-y-5 mb-5 pb-7">
+
+      <div className="flex flex-col items-center md:flex-row md:justify-center w-[100vw] md:gap-[8rem] ">
+        <div className=" flex flex-col items-center md:w-[30vw] my-5">
+          <div className=" md:w-[40vw]">
+            {" "}
+            <h2 className="text-center py-4 text-xl font-bold md:text-2xl">
+              Get in Touch
+            </h2>
+            <p className="text-center pb-5  md:px-1 md:text-lg">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              aliquam blanditiis voluptas ipsum maxime mollitia vero nostrum sit
+              provident eius.
+            </p>
+          </div>
+
+          {/* contact card */}
+          <div className="px-7 flex flex-col pt-5 border-2 rounded-3xl  items-start w-[75vw] space-y-5 mb-5 pb-7 md:w-[40vw]">
             <div className="flex items-center space-x-5">
               <img
                 src={
@@ -87,22 +97,29 @@ export default function Contact() {
               </div>
             </div>
           </div>
+          {/* contact card */}
         </div>
-        <div className="border-2 mt-8 mb-10 w-[75vw] rounded-3xl flex flex-col px-5 py-5">
-          <h1 className="text-center  text-xl font-bold">Drop a Message</h1>
-          <form action=" " className="flex flex-col space-y-3">
-            <div className="flex flex-col mt-5 ml-5 space-y-4">
+        {/* Drop a message */}
+        <div className="border-2 mt-8 mb-10 w-[75vw] h-[45vh] md:[65vh] ml rounded-3xl flex flex-col px-5 py-5 md:w-[35vw]  items-center border-red-400 ">
+          <h1 className="text-center  text-xl font-bold border-2 border-red-400">
+            Drop a Message
+          </h1>
+          <form
+            action=" "
+            className="flex flex-col space-y-3 border-2 border-red-400"
+          >
+            <div className="flex flex-col mt-5  space-y-4 px-8 ">
               {" "}
               <input
                 type="text"
-                className="border-2 px-4 py-1 rounded-3xl"
+                className="border-2 px-4 py-1 rounded-3xl "
                 placeholder="Name"
                 required
               />
               <textarea
                 type="text"
                 placeholder="Message"
-                className="border-2 px-4 py-1 rounded-3xl w-[100%] h-[10rem] placeholder:pt-1 "
+                className="border-2 px-4 py-1 rounded-3xl  placeholder:pt-1 "
                 required
               />
             </div>
@@ -112,6 +129,7 @@ export default function Contact() {
             </div>
           </form>
         </div>
+        {/* Drop a message */}
       </div>
     </div>
   );
