@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-import { MyContext } from "./AppLayout";
-
+import { MyContext } from "../App";
 export default function ImagePortfolio({ item }) {
   const { isLightMode } = useContext(MyContext);
-
   return (
     <div
       className={`w-[9rem] border-4 ${

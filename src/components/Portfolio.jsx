@@ -1,8 +1,9 @@
 import React from "react";
 import ImagePortfolio from "./ImagePortfolio";
 import { useContext } from "react";
-import { MyContext } from "./AppLayout";
+
 import Button from "./Button";
+import { MyContext } from "../App";
 
 const portfolioData = [
   {

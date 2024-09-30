@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import Button from "./Button";
-import { MyContext } from "./AppLayout";
+
 import Service from "./Service";
+import { MyContext } from "../App";
 
 export const styleMainHeading = `text-lg font-bold md:text-xl lg:text-2xl mt-2.5`;
 export const styleParagraph = `mt-2 px-2 md:px-0 md:text-lg lg:text-xl`;

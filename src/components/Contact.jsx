@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Button from "./Button";
-import { MyContext } from "./AppLayout";
+import { MyContext } from "../App";
 
 const MyDetails = {
   address: `Neyyattinkara, Trivandrum, Kerala`,
@@ -18,7 +18,6 @@ const MyDetails = {
 export default function Contact() {
   const { isLightMode } = useContext(MyContext);
   const styleDetails = `text-sm`;
-
   return (
     <div className=" w-[100vw] h-fit flex flex-col mt-[5rem] ">
       <div className="border-b-2">

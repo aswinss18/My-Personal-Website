@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { MyContext } from "./AppLayout";
+import { MyContext } from "../App";
 
 export default function Footer() {
   const { isLightMode } = useContext(MyContext);
+
   return (
     <div
       className={

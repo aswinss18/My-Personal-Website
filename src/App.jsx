@@ -9,6 +9,9 @@ import HeroSection from "./components/HeroSection";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
+import { createContext, useState } from "react";
+
+export const MyContext = createContext();
 
 const router = createBrowserRouter([
   {
@@ -23,7 +26,15 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  const [isLightMode, setLightMode] = useState(true);
+  function handleTheme() {
+    setLightMode((isLightMode) => !isLightMode);
+  }
+  return (
+    <MyContext.Provider value={{ isLightMode, setLightMode, handleTheme }}>
+      <RouterProvider router={router} />
+    </MyContext.Provider>
+  );
 }
 
 export default App;

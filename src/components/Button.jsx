@@ -1,6 +1,6 @@
 import { space } from "postcss/lib/list";
 import React, { Children, useContext } from "react";
-import { MyContext } from "./AppLayout";
+import { MyContext } from "../App";
 
 export default function Button({ type, onClick, children }) {
   const { isLightMode } = useContext(MyContext);

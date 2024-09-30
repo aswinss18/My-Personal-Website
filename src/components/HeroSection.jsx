@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Button from "./Button";
-import { MyContext } from "./AppLayout";
+import { MyContext } from "../App";
 
 export default function HeroSection() {
   const { isLightMode } = useContext(MyContext);

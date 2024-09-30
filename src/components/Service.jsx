@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { styleParagraph, styleSubHeading } from "./About";
-import { MyContext } from "./AppLayout";
+import { MyContext } from "../App";
 
 export default function Service({ data }) {
   const { isLightMode } = useContext(MyContext);
-  console.log(data);
 
   return (
     <div
