@@ -4,6 +4,81 @@ import { useContext } from "react";
 import { MyContext } from "./AppLayout";
 import Button from "./Button";
 
+const portfolioData = [
+  {
+    name: "Disney",
+    type: "Web",
+    image: "public/images/Disney.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Fast React Pizza",
+    type: "Web",
+    image: "public/images/Pizza.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Snapshot",
+    type: "Web",
+    image: "public/images/Snapshot.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Calculator",
+    type: "Web",
+    image: "public/images/Calculator.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "React Quiz",
+    type: "Web",
+    image: "public/images/React.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Pig Game",
+    type: "Web",
+    image: "public/images/Dice.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Muc",
+    type: "App",
+    image: "public/images/Muc.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Finger",
+    type: "App",
+    image: "public/images/Finger.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+  {
+    name: "Clock",
+    type: "Web",
+    image: "public/images/Clock.jpeg",
+    link: "https://disneyplus-clone-11764.web.app/home",
+    priority: 1,
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta quia unde temporibus consequuntur nesciunt pariatur optio esse facilis sequi distinctio.",
+  },
+];
+
 export default function Portfolio() {
   const { isLightMode } = useContext(MyContext);
   const styleSpan = `font-semibold  transition-all duration-300 ease-in-out px-2 md:py-1 md:pl-4 md:pr-10 md:text-lg
@@ -19,7 +94,7 @@ export default function Portfolio() {
         <div
           className={`${
             isLightMode ? `border-gray-950` : `border-white`
-          } mt-12 flex   md:flex-col  border-4 rounded-3xl overflow-hidden md:absolute md:left-[-8rem] md:ml-2`}
+          } mt-12 flex   md:flex-col  border-4 rounded-3xl overflow-hidden md:absolute md:left-[-8rem] md:ml-2 cursor-pointer`}
         >
           <span className={styleSpan}>All</span>
           <span className={styleSpan}>Web</span>
@@ -28,12 +103,12 @@ export default function Portfolio() {
           <span className={styleSpan}>Graphic</span>
         </div>
 
-        <div className="grid grid-cols-3 px-5 py-5  gap-4 mt-6 ">
-          <ImagePortfolio /> <ImagePortfolio /> <ImagePortfolio />{" "}
-          <ImagePortfolio /> <ImagePortfolio /> <ImagePortfolio />{" "}
-          <ImagePortfolio /> <ImagePortfolio /> <ImagePortfolio />
+        <div className="grid grid-cols-3 px-5 py-5  gap-4 mt-6 cursor-pointer ">
+          {portfolioData.map((item, i) => (
+            <ImagePortfolio key={i} item={item} />
+          ))}
         </div>
-        <div className="md:absolute md:top-[15rem] md:left-[-116px] ">
+        <div className="md:absolute md:top-[15.5rem] md:left-[-116px]  ">
           {isLightMode ? (
             <Button type="primary">Load more</Button>
           ) : (

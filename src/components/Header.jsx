@@ -36,7 +36,7 @@ export default function Header() {
             : "text-white font-san font-bold text-[1rem] sm:text-2xl element ml-1"
         }
       >
-        Aswin
+        <Link to="/">Aswin</Link>
       </div>
       <div className="sm:flex hidden md:space-x-28 sm:text-xl text-[0.85rem] text-gray-950">
         <Link to="/">

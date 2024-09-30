@@ -100,20 +100,20 @@ export default function Contact() {
           {/* contact card */}
         </div>
         {/* Drop a message */}
-        <div className="border-2 mt-8 mb-12 w-[75vw] h-auto md:h-fit rounded-3xl flex flex-col  py-5 md:w-[40vw]   items-center lg:w-[35vw]">
+        <div className="border-2 mt-8 mb-12 w-[75vw] h-auto md:h-fit rounded-3xl flex flex-col  py-5 md:w-[40vw]   items-center lg:w-[35vw] ">
           <h1 className="text-center  text-xl font-bold ">Drop a Message</h1>
           <form action=" " className="flex flex-col space-y-3 mt-4 ">
             <div className="flex flex-col mt-5   space-y-4 px-8 ">
               <input
                 type="text"
-                className="border-2 px-4 py-1 rounded-3xl"
+                className="border-2 px-4 py-2 rounded-3xl cursor-pointer"
                 placeholder="Name"
                 required
               />
               <textarea
                 type="text"
                 placeholder="Message"
-                className="border-2 px-4 py-1 rounded-3xl  placeholder:pt-1 md:w-[260px] w-[300px] lg:w-[370px]"
+                className="border-2 px-4 py-2 rounded-3xl  placeholder:pt-1 md:w-[260px] w-[300px] lg:w-[370px] cursor-pointer "
                 required
               />
             </div>
