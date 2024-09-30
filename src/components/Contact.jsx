@@ -31,7 +31,7 @@ export default function Contact() {
         </p>
       </div>
 
-      <div className="flex flex-col items-center md:flex-row md:justify-center w-[100vw] md:gap-[8rem] ">
+      <div className="flex flex-col items-center md:flex-row md:justify-center w-[100vw] md:gap-[5rem] lg:gap-[8rem] ">
         <div className=" flex flex-col items-center md:w-[30vw] my-5">
           <div className=" md:w-[40vw]">
             {" "}
@@ -100,31 +100,25 @@ export default function Contact() {
           {/* contact card */}
         </div>
         {/* Drop a message */}
-        <div className="border-2 mt-8 mb-10 w-[75vw] h-[45vh] md:[65vh] ml rounded-3xl flex flex-col px-5 py-5 md:w-[35vw]  items-center border-red-400 ">
-          <h1 className="text-center  text-xl font-bold border-2 border-red-400">
-            Drop a Message
-          </h1>
-          <form
-            action=" "
-            className="flex flex-col space-y-3 border-2 border-red-400"
-          >
-            <div className="flex flex-col mt-5  space-y-4 px-8 ">
-              {" "}
+        <div className="border-2 mt-8 mb-12 w-[75vw] h-auto md:h-fit rounded-3xl flex flex-col  py-5 md:w-[40vw]   items-center lg:w-[35vw]">
+          <h1 className="text-center  text-xl font-bold ">Drop a Message</h1>
+          <form action=" " className="flex flex-col space-y-3 mt-4 ">
+            <div className="flex flex-col mt-5   space-y-4 px-8 ">
               <input
                 type="text"
-                className="border-2 px-4 py-1 rounded-3xl "
+                className="border-2 px-4 py-1 rounded-3xl"
                 placeholder="Name"
                 required
               />
               <textarea
                 type="text"
                 placeholder="Message"
-                className="border-2 px-4 py-1 rounded-3xl  placeholder:pt-1 "
+                className="border-2 px-4 py-1 rounded-3xl  placeholder:pt-1  w-[300px] lg:w-[400px]"
                 required
               />
             </div>
 
-            <div className="mx-auto ">
+            <div className="mx-auto pb-2">
               <Button type="primary">Send</Button>
             </div>
           </form>
