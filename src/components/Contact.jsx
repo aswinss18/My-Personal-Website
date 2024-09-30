@@ -113,7 +113,7 @@ export default function Contact() {
               <textarea
                 type="text"
                 placeholder="Message"
-                className="border-2 px-4 py-1 rounded-3xl  placeholder:pt-1  w-[300px] lg:w-[400px]"
+                className="border-2 px-4 py-1 rounded-3xl  placeholder:pt-1 md:w-[260px] w-[300px] lg:w-[370px]"
                 required
               />
             </div>
