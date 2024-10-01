@@ -24,7 +24,11 @@ export default function Footer() {
         </h2>{" "}
         <div className="flex   w-[65vw] sm:w-[75vw] mb-[4rem] mt-6 justify-center gap-8 lg:gap-12 lg:text-xl lg:mt-8 ">
           {" "}
-          <a href="" target="_blank" className="flex gap-10 ">
+          <a
+            href="https://github.com/aswinss18"
+            target="_blank"
+            className="flex gap-10 "
+          >
             {" "}
             <div className="flex ">
               {isLightMode ? (
@@ -55,7 +59,11 @@ export default function Footer() {
               Github
             </h3>
           </a>
-          <a href="" target="_blank" className="flex gap-10">
+          <a
+            href="https://www.linkedin.com/in/aswin-s-s-632405306/"
+            target="_blank"
+            className="flex gap-10"
+          >
             {" "}
             <div className="flex ">
               {isLightMode ? (
@@ -86,7 +94,7 @@ export default function Footer() {
               Linkedin
             </h3>
           </a>
-          <a href="" className="flex gap-10">
+          <a href="" target="_blank" className="flex gap-10">
             {" "}
             <div className="">
               {isLightMode ? (
@@ -117,7 +125,7 @@ export default function Footer() {
               Instagram
             </h3>
           </a>
-          <a href="" className="flex gap-10">
+          <a href="" target="_blank" className="flex gap-10">
             {" "}
             <div className="">
               {isLightMode ? (
@@ -148,7 +156,11 @@ export default function Footer() {
               X.com
             </h3>
           </a>
-          <a href="" className="flex gap-10">
+          <a
+            href="https://wa.me/9074873377"
+            target="_blank"
+            className="flex gap-10"
+          >
             {" "}
             <div className="">
               {isLightMode ? (

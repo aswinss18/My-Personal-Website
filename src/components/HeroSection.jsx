@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Button from "./Button";
 import { MyContext } from "../App";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   const { isLightMode } = useContext(MyContext);
@@ -43,9 +44,16 @@ export default function HeroSection() {
             ipsum dolor, sit amet consectetur adipisicing elit. Officia enim
           </p>
         </div>{" "}
-        <div className="lg:space-x-5 ">
-          <Button type="primary">Resume</Button>
-          <Button type="secondary">Portfolio</Button>
+        <div className="lg:space-x-3 ">
+          <a
+            href="https://drive.google.com/file/d/1MwZR__HBZ4M4JeArr5I7bniCb5SXYvFq/view?usp=drivesdk"
+            target="_blank"
+          >
+            <Button type="primary">Resume</Button>
+          </a>
+          <Link to="/portfolio">
+            <Button type="secondary">Portfolio</Button>
+          </Link>
         </div>
       </div>
     </div>

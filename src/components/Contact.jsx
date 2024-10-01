@@ -46,55 +46,67 @@ export default function Contact() {
 
           {/* contact card */}
           <div className="px-7 flex flex-col pt-5 border-2 rounded-3xl  items-start w-[75vw] space-y-5 mb-5 pb-7 md:w-[40vw]">
-            <div className="flex items-center space-x-5">
-              <img
-                src={
-                  isLightMode
-                    ? MyDetails.iconLocationLight
-                    : MyDetails.iconLocationDark
-                }
-                className="w-8 h-8"
-                alt=""
-              />
-
-              <div className={styleDetails}>
-                <p>Address:</p>
-                <p>{MyDetails.address}</p>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-5">
+            <a href="https://maps.app.goo.gl/SSaoFB1q4Y4cUaTy8" target="_blank">
               {" "}
-              <img
-                src={
-                  isLightMode ? MyDetails.iconMailLight : MyDetails.iconMailDark
-                }
-                className="w-8 h-8"
-                alt=""
-              />
-              <div className={styleDetails}>
-                <p>Email:</p>
-                <p>{MyDetails.email}</p>
+              <div className="flex items-center space-x-5 ">
+                <img
+                  src={
+                    isLightMode
+                      ? MyDetails.iconLocationLight
+                      : MyDetails.iconLocationDark
+                  }
+                  className="w-8 h-8"
+                  alt=""
+                />
+
+                <div className={styleDetails}>
+                  <p>Address:</p>
+                  <p>{MyDetails.address}</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center space-x-5">
+            </a>
+
+            <a href="mailTo:aswinss0018@gmail.com" target="_blank">
               {" "}
-              <img
-                src={
-                  isLightMode
-                    ? MyDetails.iconPhoneLight
-                    : MyDetails.iconPhoneDark
-                }
-                className="w-8 h-8"
-                alt=""
-              />
-              <div className={styleDetails}>
-                <p>Phone:</p>
-                <p>
-                  +{MyDetails.countrycode} {MyDetails.phone}
-                </p>
+              <div className="flex items-center space-x-5">
+                {" "}
+                <img
+                  src={
+                    isLightMode
+                      ? MyDetails.iconMailLight
+                      : MyDetails.iconMailDark
+                  }
+                  className="w-8 h-8"
+                  alt=""
+                />
+                <div className={styleDetails}>
+                  <p>Email:</p>
+
+                  <p className="hover:underline">{MyDetails.email}</p>
+                </div>
               </div>
-            </div>
+            </a>
+            <a href=" https://wa.me/9074873377" target="_blank">
+              {" "}
+              <div className="flex items-center space-x-5">
+                {" "}
+                <img
+                  src={
+                    isLightMode
+                      ? MyDetails.iconPhoneLight
+                      : MyDetails.iconPhoneDark
+                  }
+                  className="w-8 h-8"
+                  alt=""
+                />
+                <div className={styleDetails}>
+                  <p>Phone:</p>
+                  <p>
+                    +{MyDetails.countrycode} {MyDetails.phone}
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
           {/* contact card */}
         </div>
