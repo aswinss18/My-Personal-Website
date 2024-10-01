@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
@@ -6,12 +6,12 @@ import Menubar from "./Menubar";
 import { MyContext } from "../App";
 
 export default function AppLayout() {
-  const { isLightMode } = useContext(MyContext);
+  const { isLightMode, isMenuOpen, handleMenu } = useContext(MyContext);
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {" "}
-      <Menubar />
+      {isMenuOpen && <Menubar />}
       <div
         className={`flex flex-col relative  ${
           isLightMode
