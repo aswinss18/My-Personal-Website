@@ -10,7 +10,7 @@ export default function Menubar() {
   }`;
 
   return (
-    <div className="absolute z-10  w-full h-full backdrop-blur-sm sm:hidden ">
+    <div className="absolute z-100  w-full h-full backdrop-blur-sm sm:hidden ">
       <div
         className={`w-[70vw] mt-[20vh] h-[60vh] border-r-4 border-y-4 rounded-r-3xl  pt-5 ${
           isLightMode

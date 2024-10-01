@@ -14,8 +14,8 @@ export default function Header() {
       <div
         className={
           isLightMode
-            ? "  border-b-2 fixed top-0 right-0 z-9 left-0 bg-white border-gray-300 py-5 flex justify-evenly h-[3.5rem] items-center"
-            : "border-b-2 bg-gray-950 fixed top-0 z-9 right-0 left-0 border-gray-100 py-5 flex justify-evenly h-[3.5rem] items-center"
+            ? "  border-b-2 fixed top-0 right-0 z-30 left-0 bg-white border-gray-300 py-5 flex justify-evenly h-[3.5rem] items-center"
+            : "border-b-2 bg-gray-950 fixed top-0 z-30 right-0 left-0 border-gray-100 py-5 flex justify-evenly h-[3.5rem] items-center"
         }
       >
         <div className="sm:hidden w-6 h-6 " onClick={handleMenu}>
