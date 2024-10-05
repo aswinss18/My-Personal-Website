@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { MyContext } from "../App";
+import { Link } from "react-router-dom";
 
 export default function Menubar() {
   const { isLightMode, handleMenu } = useContext(MyContext);
-  const spanStyle = `pl-8 py-2 border-b-2 transition-all duration-200 ${
+  const spanStyle = `pl-8 py-2 border-b-2 transition-all duration-200  cursor-pointer ${
     isLightMode
       ? `border-gray-950 hover:text-white hover:bg-gray-950`
       : `border-white  hover:text-gray-950 hover:bg-white`
@@ -33,14 +34,22 @@ export default function Menubar() {
         </div>
 
         <div
-          className={`flex mt-[1rem] text-xl font-semibold  flex-col border-t-2 ${
+          className={`flex mt-[20%] text-xl font-semibold  flex-col border-t-2 ${
             isLightMode ? "border-gray-950 " : "border-white"
           } `}
         >
-          <span className={spanStyle}>Home</span>
-          <span className={spanStyle}>About</span>
-          <span className={spanStyle}>Portfolio</span>
-          <span className={spanStyle}>Contact</span>
+          <Link to="/" className={spanStyle} onClick={handleMenu}>
+            Home
+          </Link>
+          <Link to="/about" className={spanStyle} onClick={handleMenu}>
+            About
+          </Link>
+          <Link to="/portfolio" className={spanStyle} onClick={handleMenu}>
+            Portfolio
+          </Link>
+          <Link to="/contact" className={spanStyle} onClick={handleMenu}>
+            Contact
+          </Link>
         </div>
       </div>
     </div>
