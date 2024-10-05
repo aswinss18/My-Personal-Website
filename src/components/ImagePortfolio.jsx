@@ -8,7 +8,13 @@ export default function ImagePortfolio({ item }) {
         isLightMode ? `border-gray-950` : `border-white`
       } rounded-3xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 md:w-[10rem] lg:w-[12rem] flex items-center justify-center `}
     >
-      <img src={item.image} className="object-cover w-full h-full" alt="" />
+      <a href={item.link} className="object-cover min-h-[10rem] w-full h-full">
+        <img
+          src={item.image}
+          className="object-cover w-full h-full"
+          alt={item.name}
+        />
+      </a>
     </div>
   );
 }

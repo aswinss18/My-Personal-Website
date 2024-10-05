@@ -4,9 +4,11 @@ import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import Menubar from "./Menubar";
 import { MyContext } from "../App";
+import Loader from "./Loader";
 
 export default function AppLayout() {
-  const { isLightMode, isMenuOpen, handleMenu } = useContext(MyContext);
+  const { isLightMode, isMenuOpen, handleMenu, loading } =
+    useContext(MyContext);
 
   return (
     <div className="relative ">
@@ -20,6 +22,7 @@ export default function AppLayout() {
         } `}
       >
         <Header />
+        {loading && <Loader />}
         <Outlet />
         <Footer />
       </div>

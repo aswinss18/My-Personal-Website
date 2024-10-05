@@ -28,6 +28,7 @@ const router = createBrowserRouter([
 function App() {
   const [isLightMode, setLightMode] = useState(true);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
   function handleTheme() {
     setLightMode((isLightMode) => !isLightMode);
   }
@@ -37,7 +38,14 @@ function App() {
 
   return (
     <MyContext.Provider
-      value={{ isLightMode, handleTheme, isMenuOpen, handleMenu }}
+      value={{
+        isLightMode,
+        handleTheme,
+        isMenuOpen,
+        handleMenu,
+        loading,
+        setLoading,
+      }}
     >
       <RouterProvider router={router} />
     </MyContext.Provider>

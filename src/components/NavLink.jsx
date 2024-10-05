@@ -1,15 +1,15 @@
 import React from "react";
+import "../../src/index.css";
 
 export default function NavLink({ children, theme }) {
-  return (
-    <div
-      className={
-        theme
-          ? "font-semibold border-transparent border-b-[2.5px] px-2 text-gray-950 transition-all duration-200 ease-in-out  transform hover:border-b-[2.5px] hover:border-gray-950 "
-          : "font-semibold border-transparent border-b-[2.5px] px-2 text-white transition-all duration-200 ease-in-out  transform hover:border-b-[2.5px] hover:border-white "
-      }
-    >
-      {children}
-    </div>
-  );
+  // Base style for the link
+
+  const baseStyle = `font-semibold border-transparent border-b-2 px-2 transition-all duration-200 ease-in-out transform`;
+
+  // Conditional theme-based styles with hover effect
+  const themeStyle = theme
+    ? "text-gray-950 hover:border-gray-950"
+    : "text-white hover:border-white";
+
+  return <div className={`${baseStyle}  ${themeStyle} `}>{children}</div>;
 }

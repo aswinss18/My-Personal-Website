@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import NavLink from "./NavLink";
 import Button from "./Button";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink as RouterLink } from "react-router-dom";
 import { MyContext } from "../App";
 export default function Header() {
   const { isLightMode, handleTheme, isMenuOpen, handleMenu } =
@@ -44,22 +44,22 @@ export default function Header() {
           <Link to="/">Aswin</Link>
         </div>
         <div className="sm:flex hidden md:space-x-28 sm:text-xl text-[0.85rem] text-gray-950">
-          <Link to="/">
+          <RouterLink to="/">
             {" "}
             <NavLink theme={isLightMode}>Home</NavLink>
-          </Link>{" "}
-          <Link to="/about">
+          </RouterLink>{" "}
+          <RouterLink to="/about">
             {" "}
             <NavLink theme={isLightMode}>About</NavLink>
-          </Link>{" "}
-          <Link to="/portfolio">
+          </RouterLink>{" "}
+          <RouterLink to="/portfolio">
             {" "}
             <NavLink theme={isLightMode}>Portfolio</NavLink>
-          </Link>{" "}
-          <Link to="/contact">
+          </RouterLink>{" "}
+          <RouterLink to="/contact">
             {" "}
             <NavLink theme={isLightMode}>Contact</NavLink>
-          </Link>
+          </RouterLink>
         </div>
         {isLightMode ? (
           <Button type="theme-day" onClick={handleTheme} />

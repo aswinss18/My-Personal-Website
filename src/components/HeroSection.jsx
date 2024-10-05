@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <div
       className={
-        +isLightMode
+        isLightMode
           ? "flex  flex-col     bg-white text-gray-950 h-[100vh] w-[100vw] md:flex-row-reverse"
           : "flex    flex-col  bg-gray-950 text-white h-[100vh] w-[100vw] md:flex-row-reverse"
       }
