@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 
 const heroData = {
   name: "Aswin S S",
-  introduction: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem
-            non in ex vero obcaecati cum ducimus esse accusamus itaque! Lorem
-            ipsum dolor, sit amet consectetur adipisicing elit. Officia enim`,
+  introduction: `UI Developer with expertise in React and Figma. I specialize in building intuitive, responsive user interfaces that offer seamless user experiences. I'm passionate about blending creativity with technology to deliver visually appealing and highly functional designs.`,
   job: "UI Developer",
 };
 

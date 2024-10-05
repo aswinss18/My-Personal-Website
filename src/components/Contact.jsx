@@ -10,10 +10,8 @@ const MyDetails = {
   phone: 9074873377,
   countrycode: 91,
   email: `aswinss0018@gmail.com`,
-  description1: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum
-          iste non, provident quibusdam animi numquam sed ea dolor ab.`,
-  description2: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum eum
-          iste non, provident quibusdam animi numquam sed ea dolor ab.`,
+  description1: `For inquiries, project discussions, or collaboration opportunities, please use the contact form below or reach out via email or phone. I am eager to connect and explore how we can work together to achieve your goals.`,
+  description2: `Let’s connect! Whether you have questions or project ideas, feel free to reach out. Your inquiries are important and will be responded to promptly.`,
   iconLocationLight: "public/images/location-dark.svg",
   iconLocationDark: "public/images/location-white.svg",
   iconPhoneLight: "public/images/phone-dark.svg",

@@ -9,11 +9,11 @@ export const styleParagraph = `mt-2 px-2 md:px-0 md:text-lg lg:text-xl`;
 export const styleSubHeading = `mt-2 text-sm font-semibold md:text-lg lg:text-xl`;
 
 const aboutData = {
-  story: `  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus dolores quisquam dolor, commodi architecto suscipit
-              nobis tempore iste autem at est esse mollitia, inventore nulla
-              magni corporis? Commodi, saepe dolorum?`,
-  heading1: ` LET ME INTRODUCE MYSELF`,
+  story: `Hello! I’m Aswin, a passionate developer dedicated to turning ideas into innovative web and mobile solutions. My love for technology and design ignited my journey into development, where I craft exceptional user experiences.
+   
+    As a self-taught developer, I thrive on creativity, building solutions that captivate users and solve real-world problems. With a focus on front-end technologies like React and Figma, I aim to bring designs to life and create seamless interactions. 
+    
+  `,
   subtitle: ` A story of hardwork and perseverance.`,
 };
 
@@ -22,9 +22,7 @@ const services = [
     name: "Web Development",
     iconLight: "public/images/web-white.svg",
     iconDark: "public/images/web-black.svg",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
-    iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
-    laudantium veniam`,
+    desc: `Offers responsive and user-friendly websites tailored to specific needs, ensuring optimal performance and security for an engaging user experience.`,
     no: 5,
   },
 
@@ -32,27 +30,21 @@ const services = [
     name: "App Development",
     iconLight: "public/images/code-white.svg",
     iconDark: "public/images/code-black.svg",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
-    iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
-    laudantium veniam`,
+    desc: `Builds high-quality mobile applications for Android and iOS, focusing on seamless functionality and an exceptional user experience.`,
     no: 2,
   },
   {
     name: "UI UX Design",
     iconLight: "public/images/pen-black.svg",
     iconDark: "public/images/pen-white.svg",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
-    iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
-    laudantium veniam`,
+    desc: `Designs intuitive interfaces that enhance user satisfaction, combining aesthetic appeal with functionality for a smooth navigation experience.`,
     no: 7,
   },
   {
     name: "Graphic Design",
     iconLight: "public/images/palette-black.svg",
     iconDark: "public/images/palette-white.svg",
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat
-    iure explicabo reprehenderit dolore obcaecati expedita harum beatae,
-    laudantium veniam`,
+    desc: `Delivers visually compelling materials that effectively communicate a brand’s message and strengthen its visual identity.`,
     no: 7,
   },
 ];
@@ -67,7 +59,7 @@ export default function About() {
           isLightMode
             ? "text-gray-950 bg-white border-gray-300"
             : "bg-gray-950 text-white border-white"
-        } sm:w-[100vw] sm:h-[85vh] h-[70vh]  text-gray-950 md:flex md:items-center border-b-2 `}
+        } sm:w-[100vw] sm:h-[85vh] h-[80vh] text-gray-950 md:flex md:items-center border-b-2 `}
       >
         <div
           className={`mt-[12vh] rounded-3xl border-[0.35rem] ${
@@ -99,7 +91,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col items-center mt-5 mb-10">
+      <div className="flex flex-col items-center mt-5 mb-10">
         <h1 className={styleMainHeading}>Services</h1>
         <div>
           <span className="flex flex-col items-center sm:flex-row sm:justify-evenly mt-5 flex-wrap w-[90vw]">
