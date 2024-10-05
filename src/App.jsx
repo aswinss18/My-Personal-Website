@@ -3,6 +3,8 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import AppLayout from "./components/AppLayout";
 import "./index.css";
 import HeroSection from "./components/HeroSection";
@@ -47,6 +49,8 @@ function App() {
         setLoading,
       }}
     >
+      {" "}
+      <ToastContainer />
       <RouterProvider router={router} />
     </MyContext.Provider>
   );

@@ -8,6 +8,15 @@ export const styleMainHeading = `text-lg font-bold md:text-xl lg:text-2xl mt-2.5
 export const styleParagraph = `mt-2 px-2 md:px-0 md:text-lg lg:text-xl`;
 export const styleSubHeading = `mt-2 text-sm font-semibold md:text-lg lg:text-xl`;
 
+const aboutData = {
+  story: `  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus dolores quisquam dolor, commodi architecto suscipit
+              nobis tempore iste autem at est esse mollitia, inventore nulla
+              magni corporis? Commodi, saepe dolorum?`,
+  heading1: ` LET ME INTRODUCE MYSELF`,
+  subtitle: ` A story of hardwork and perseverance.`,
+};
+
 const services = [
   {
     name: "Web Development",
@@ -74,20 +83,13 @@ export default function About() {
         <div className="text-center mt-5 md:w-[60vw] md:text-left  md:mr-[20vw] md:pl-[2.5rem] lg:pl-[3.5rem] ">
           <div>
             <h2 className="text-sm font-semibold md:text-lg lg:text-xl">
-              LET ME INTRODUCE MYSELF
+              {aboutData.heading1}
             </h2>
             <h1 className={styleMainHeading}>About me</h1>
           </div>
           <div>
-            <h2 className={styleSubHeading}>
-              A story of hardwork and perseverance.
-            </h2>
-            <p className={styleParagraph}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus dolores quisquam dolor, commodi architecto suscipit
-              nobis tempore iste autem at est esse mollitia, inventore nulla
-              magni corporis? Commodi, saepe dolorum?
-            </p>
+            <h2 className={styleSubHeading}>{aboutData.subtitle}</h2>
+            <p className={styleParagraph}>{aboutData.story}</p>
           </div>
 
           <div className="mt-2 md:space-x-4 lg:pt-6">

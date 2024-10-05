@@ -3,6 +3,14 @@ import Button from "./Button";
 import { MyContext } from "../App";
 import { Link } from "react-router-dom";
 
+const heroData = {
+  name: "Aswin S S",
+  introduction: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem
+            non in ex vero obcaecati cum ducimus esse accusamus itaque! Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Officia enim`,
+  job: "UI Developer",
+};
+
 export default function HeroSection() {
   const { isLightMode } = useContext(MyContext);
 
@@ -29,19 +37,17 @@ export default function HeroSection() {
       >
         <div>
           <h1 className="text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl ">
-            I'm Aswin S S
+            I'm {heroData.name}
           </h1>
         </div>
         <div>
           <h3 className="font-semibold sm:text-xl md:text-2xl lg:text-3xl ">
-            I'm a <span className="font-bold">UI Developer </span>
+            I'm a <span className="font-bold">{heroData.job} </span>
           </h3>
         </div>
         <div>
           <p className="font-normal sm:text-xl mb-4 md:text-2xl w-[70vw] sm:w-[50vw]  text-center sm:text-left">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum autem
-            non in ex vero obcaecati cum ducimus esse accusamus itaque! Lorem
-            ipsum dolor, sit amet consectetur adipisicing elit. Officia enim
+            {heroData.introduction}
           </p>
         </div>{" "}
         <div className="lg:space-x-3 ">
