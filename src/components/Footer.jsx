@@ -9,7 +9,7 @@ export default function Footer() {
       className={
         isLightMode
           ? "bg-white border-t-2 border-gray-300 w-[100vw]  flex flex-col"
-          : "bg-gray-950   border-t-2 border-gray-100 w-[100vw]  flex flex-col"
+          : "bg-gray-950   border-t-2 border-gray-100 w-[100vw]  flex flex-col h-[50vh]"
       }
     >
       <div className="mx-auto ">

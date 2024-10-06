@@ -14,7 +14,7 @@ export default function Header() {
       <div
         className={
           isLightMode
-            ? "  border-b-2 fixed top-0 right-0 z-30 left-0 bg-white border-gray-300 py-5 flex justify-evenly h-[3.5rem] items-center"
+            ? "  border-b-2 fixed top-0 right-0 z-30 left-0 bg-white border-gray-300 py-5 flex justify-evenly h-[3.5rem] items-center "
             : "border-b-2 bg-gray-950 fixed top-0 z-30 right-0 left-0 border-gray-100 py-5 flex justify-evenly h-[3.5rem] items-center"
         }
       >
@@ -43,8 +43,8 @@ export default function Header() {
         >
           <Link to="/">Aswin</Link>
         </div>
-        <nav>
-          <ul className="hidden sm:flex font-semibold  sm:space-x-10 md:space-x-20 px-5 lg:space-x-32 text-lg">
+        <nav className="hidden sm:block">
+          <ul className=" sm:flex font-semibold  sm:space-x-5 md:space-x-12 px-5 lg:space-x-24 text-lg">
             <li>
               <NavLink to="/" exact activeClassName="active">
                 Home
@@ -72,11 +72,14 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        {isLightMode ? (
-          <Button type="theme-day" onClick={handleTheme} />
-        ) : (
-          <Button type="theme-night" onClick={handleTheme} />
-        )}
+        <div className="">
+          {" "}
+          {isLightMode ? (
+            <Button type="theme-day" onClick={handleTheme} />
+          ) : (
+            <Button type="theme-night" onClick={handleTheme} />
+          )}
+        </div>
       </div>
     </>
   );

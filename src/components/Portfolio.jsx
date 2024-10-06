@@ -9,7 +9,7 @@ import Loader from "./Loader";
 
 export default function Portfolio() {
   const [portfolioData, setPortfolioData] = useState([]); // State to store the collection data
-  const { loading, setLoading } = useContext(MyContext); // State to handle loading
+  const { loading, setLoading, isLightMode } = useContext(MyContext); // State to handle loading
 
   useEffect(() => {
     const fetchPortfolioData = async () => {
@@ -32,7 +32,7 @@ export default function Portfolio() {
     fetchPortfolioData();
   }, []);
 
-  const { isLightMode } = useContext(MyContext); // Access the light/dark mode from context
+  // Access the light/dark mode from context
 
   const styleSpan = `font-semibold transition-all duration-300 ease-in-out px-2 md:py-1 md:pl-4 md:pr-10 md:text-lg ${
     isLightMode
@@ -70,11 +70,9 @@ export default function Portfolio() {
                 ))}
               </div>
               <div className="md:absolute md:top-[15.5rem] md:left-[-116px]">
-                {isLightMode ? (
-                  <Button type="primary">Load more</Button>
-                ) : (
-                  <Button type="secondary">Load more</Button>
-                )}
+                <Button type={isLightMode ? "primary" : "secondary"}>
+                  Load more
+                </Button>
               </div>
             </>
           )}

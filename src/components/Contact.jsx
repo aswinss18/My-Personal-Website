@@ -148,7 +148,7 @@ export default function Contact() {
           >
             <input
               type="text"
-              className="border-2 focus:outline-gray-950  px-4 py-3 rounded-3xl"
+              className="border-2 focus:outline-gray-950  px-4 py-3 rounded-3xl text-gray-950"
               placeholder="Name"
               required
               onChange={(e) => setName(e.target.value)}
@@ -158,7 +158,7 @@ export default function Contact() {
             <textarea
               type="text"
               placeholder="Message"
-              className="border-2 focus:outline-gray-950  px-4 py-4 rounded-3xl"
+              className="border-2 focus:outline-gray-950  px-4 py-4 rounded-3xl text-gray-950"
               required
               onChange={(e) => setMessage(e.target.value)}
               disabled={isSubmit}

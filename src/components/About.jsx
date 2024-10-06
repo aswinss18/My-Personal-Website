@@ -3,6 +3,7 @@ import Button from "./Button";
 
 import Service from "./Service";
 import { MyContext } from "../App";
+import { Link } from "react-router-dom";
 
 export const styleMainHeading = `text-lg font-bold md:text-xl lg:text-2xl mt-2.5`;
 export const styleParagraph = `mt-2 px-2 md:px-0 md:text-lg lg:text-xl`;
@@ -91,8 +92,16 @@ export default function About() {
           </div>
 
           <div className="mt-2 md:space-x-4 lg:pt-6">
-            <Button type="primary">HIRE ME</Button>
-            <Button type="secondary">RESUME</Button>
+            <Link to="/contact">
+              <Button type="primary">HIRE ME</Button>
+            </Link>
+
+            <a
+              href="https://drive.google.com/drive/folders/1MoqJ4_q5dUn-GTh-_2ixm-xSbhiuqj3l"
+              target="_blank"
+            >
+              <Button type="secondary">Resume</Button>
+            </a>
           </div>
         </div>
       </div>

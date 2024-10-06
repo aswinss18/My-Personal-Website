@@ -47,7 +47,7 @@ export default function HeroSection() {
         </div>{" "}
         <div className="lg:space-x-3 ">
           <a
-            href="https://drive.google.com/file/d/1MwZR__HBZ4M4JeArr5I7bniCb5SXYvFq/view?usp=drivesdk"
+            href="https://drive.google.com/drive/folders/1MoqJ4_q5dUn-GTh-_2ixm-xSbhiuqj3l"
             target="_blank"
           >
             <Button type="primary">Resume</Button>
