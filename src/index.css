@@ -14,5 +14,7 @@
 }
 
 .active {
-  border-bottom: 2px;
+  border-bottom: 3px solid;
+  padding-left: 3px;
+  padding-right: 3px;
 }

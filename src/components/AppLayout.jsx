@@ -11,7 +11,7 @@ export default function AppLayout() {
     useContext(MyContext);
 
   return (
-    <div className="relative ">
+    <div className="relative select-none">
       {" "}
       {isMenuOpen && <Menubar />}
       <div

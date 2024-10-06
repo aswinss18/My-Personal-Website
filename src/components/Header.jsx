@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import NavLink from "./NavLink";
+
 import Button from "./Button";
 
-import { Link, NavLink as RouterLink } from "react-router-dom";
 import { MyContext } from "../App";
+import { Link, NavLink } from "react-router-dom";
 export default function Header() {
   const { isLightMode, handleTheme, isMenuOpen, handleMenu } =
     useContext(MyContext);
@@ -21,13 +21,13 @@ export default function Header() {
         <div className="sm:hidden w-6 h-6 " onClick={handleMenu}>
           {isLightMode ? (
             <img
-              src="/public/images/bars-solid.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fbars-solid.svg?alt=media&token=0ced85a1-2565-4d8b-a94c-fb9d993cf55c"
               className="w-full h-full"
               alt=""
             />
           ) : (
             <img
-              src="/public/images/menu-white.svg"
+              src="https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fmenu-white.svg?alt=media&token=7117720a-b5e3-49a9-b3c4-ef7d5f7fe5da"
               className="w-full h-full"
               alt=""
             />
@@ -43,24 +43,35 @@ export default function Header() {
         >
           <Link to="/">Aswin</Link>
         </div>
-        <div className="sm:flex hidden md:space-x-28 sm:text-xl text-[0.85rem] text-gray-950">
-          <RouterLink to="/">
-            {" "}
-            <NavLink theme={isLightMode}>Home</NavLink>
-          </RouterLink>{" "}
-          <RouterLink to="/about">
-            {" "}
-            <NavLink theme={isLightMode}>About</NavLink>
-          </RouterLink>{" "}
-          <RouterLink to="/portfolio">
-            {" "}
-            <NavLink theme={isLightMode}>Portfolio</NavLink>
-          </RouterLink>{" "}
-          <RouterLink to="/contact">
-            {" "}
-            <NavLink theme={isLightMode}>Contact</NavLink>
-          </RouterLink>
-        </div>
+        <nav>
+          <ul className="hidden sm:flex font-semibold  sm:space-x-10 md:space-x-20 px-5 lg:space-x-32 text-lg">
+            <li>
+              <NavLink to="/" exact activeClassName="active">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" activeClassName="active">
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/services" activeClassName="active">
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/portfolio" activeClassName="active">
+                Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" activeClassName="active">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
         {isLightMode ? (
           <Button type="theme-day" onClick={handleTheme} />
         ) : (

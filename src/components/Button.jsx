@@ -20,7 +20,7 @@ export default function Button({ type, onClick, children }) {
         onClick={onClick}
       >
         <img
-          src="public/images/Day.png"
+          src="https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2FDay.png?alt=media&token=8d884e28-5afa-48f9-9771-410c7f2630e4"
           className="
        border border-gray-950 rounded-full  ml-[0.2rem] w-4 h-4 transition-all duration-500 ease-in-out"
           alt="Day"
@@ -38,7 +38,7 @@ export default function Button({ type, onClick, children }) {
         onClick={onClick}
       >
         <img
-          src="public/images/Night.png"
+          src="https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2FNight.png?alt=media&token=3d21ecb8-fde8-42d2-b9a0-ebde9059dea1"
           className="
        border border-white bg-white rounded-full  ml-[1.3rem] w-4 h-4 transition-all duration-500 ease-in-out"
           alt="Day"
@@ -48,7 +48,7 @@ export default function Button({ type, onClick, children }) {
   }
   if (type === "primary") {
     return (
-      <button className={isLightMode ? buttonDark : buttonLight}>
+      <button className={isLightMode ? buttonDark : buttonLight} type="submit">
         {children}
       </button>
     );

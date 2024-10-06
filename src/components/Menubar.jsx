@@ -11,9 +11,9 @@ export default function Menubar() {
   }`;
 
   return (
-    <div className="absolute z-50  w-full h-full backdrop-blur-sm sm:hidden ">
+    <div className="fixed z-50  w-full h-full backdrop-blur-sm sm:hidden ">
       <div
-        className={`w-[70vw] mt-[20vh] h-[60vh] border-r-4 border-y-4 rounded-r-3xl  pt-5 ${
+        className={`w-[70vw] mt-[20vh] h-[60vh] border-r-4 border-y-4 rounded-r-3xl   pt-5 ${
           isLightMode
             ? `bg-white border-gray-950 text-gray-950 `
             : `bg-gray-950 border-white text-white `
@@ -26,7 +26,11 @@ export default function Menubar() {
           </h2>
           <span onClick={handleMenu}>
             <img
-              src={`public/images/x-${isLightMode ? `dark` : `light`}.svg`}
+              src={
+                isLightMode
+                  ? `https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fx-dark.svg?alt=media&token=67a5ad58-fecf-4061-bf7d-f63b835f4f4a `
+                  : `https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fx-light.svg?alt=media&token=57183cae-02b9-4793-8595-96b0c85f60c2`
+              }
               className="mr-7 h-5 m"
               alt="close"
             />

@@ -12,12 +12,18 @@ const MyDetails = {
   email: `aswinss0018@gmail.com`,
   description1: `For inquiries, project discussions, or collaboration opportunities, please use the contact form below or reach out via email or phone. I am eager to connect and explore how we can work together to achieve your goals.`,
   description2: `Let’s connect! Whether you have questions or project ideas, feel free to reach out. Your inquiries are important and will be responded to promptly.`,
-  iconLocationLight: "public/images/location-dark.svg",
-  iconLocationDark: "public/images/location-white.svg",
-  iconPhoneLight: "public/images/phone-dark.svg",
-  iconPhoneDark: "public/images/phone-white.svg",
-  iconMailLight: "public/images/mail-dark.svg",
-  iconMailDark: "public/images/mail-white.svg",
+  iconLocationLight:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Flocation-dark.svg?alt=media&token=1252d7d5-1e74-430a-8b6a-80b8999b3bac",
+  iconLocationDark:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Flocation-white.svg?alt=media&token=15de6ee2-cf2e-4900-acbb-cba155df5a73",
+  iconPhoneLight:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fphone-dark.svg?alt=media&token=af6eb735-c899-4620-b314-7dfb7038ccba",
+  iconPhoneDark:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fphone-white.svg?alt=media&token=91f532c5-07be-4ebf-86c1-8420a96473fd",
+  iconMailLight:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fmail-dark.svg?alt=media&token=8c1629a7-f393-4e8d-a8ca-4ae60ba0d2f9",
+  iconMailDark:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fmail-white.svg?alt=media&token=43aaf6a6-4794-4f86-885f-9669769a269e",
 };
 
 export default function Contact() {
@@ -137,36 +143,30 @@ export default function Contact() {
           <h1 className="text-center  text-xl font-bold ">Drop a Message</h1>
           <form
             action=" "
-            className="flex flex-col space-y-3 mt-4 "
+            className="flex flex-col space-y-8 mt-4  w-[80%] "
             onSubmit={handleFormSubmit}
           >
-            <div className="flex flex-col mt-5   space-y-4 px-8 ">
-              <input
-                type="text"
-                className="border-2 px-4 py-2 rounded-3xl cursor-pointer text-gray-950"
-                placeholder="Name"
-                required
-                onChange={(e) => setName(e.target.value)}
-                value={name}
-                disabled={isSubmit}
-              />
-              <textarea
-                type="text"
-                placeholder="Message"
-                className="border-2 px-4 py-2 rounded-3xl  placeholder:pt-1 md:w-[260px] w-[300px] lg:w-[370px] cursor-pointer text-gray-950"
-                required
-                onChange={(e) => setMessage(e.target.value)}
-                disabled={isSubmit}
-                value={message}
-              />
-            </div>
+            <input
+              type="text"
+              className="border-2 focus:outline-gray-950  px-4 py-3 rounded-3xl"
+              placeholder="Name"
+              required
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              disabled={isSubmit}
+            />
+            <textarea
+              type="text"
+              placeholder="Message"
+              className="border-2 focus:outline-gray-950  px-4 py-4 rounded-3xl"
+              required
+              onChange={(e) => setMessage(e.target.value)}
+              disabled={isSubmit}
+              value={message}
+            />
 
             <div className="mx-auto pb-2">
-              <Button type="primary">
-                <button type="submit" disabled={isSubmit}>
-                  Send
-                </button>
-              </Button>
+              <Button type="primary">Send</Button>
             </div>
           </form>
         </div>

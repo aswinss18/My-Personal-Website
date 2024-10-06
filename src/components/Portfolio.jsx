@@ -64,7 +64,7 @@ export default function Portfolio() {
                 <span className={styleSpan}>Graphic</span>
               </div>
               {/* Display the portfolio items */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-5 py-5 gap-4 mt-6 cursor-pointer">
+              <div className="grid grid-cols-2 md:grid-cols-3 px-5 py-5 gap-4 mt-6 cursor-pointer">
                 {portfolioData.map((item, i) => (
                   <ImagePortfolio key={item.id} item={item} />
                 ))}

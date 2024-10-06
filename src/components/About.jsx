@@ -15,35 +15,45 @@ const aboutData = {
     
   `,
   subtitle: ` A story of hardwork and perseverance.`,
+  picture1:
+    "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2FAnimation%20design.jpeg?alt=media&token=d78dc25a-5603-44fa-8512-ed6b04ad41e7",
 };
 
 const services = [
   {
     name: "Web Development",
-    iconLight: "public/images/web-white.svg",
-    iconDark: "public/images/web-black.svg",
+    iconLight:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fweb-white.svg?alt=media&token=682a9575-2db8-4b51-950b-a0c741cdb7a4",
+    iconDark:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fweb-black.svg?alt=media&token=350f918f-fff3-4294-9236-73944b4fc943",
     desc: `Offers responsive and user-friendly websites tailored to specific needs, ensuring optimal performance and security for an engaging user experience.`,
     no: 5,
   },
 
   {
     name: "App Development",
-    iconLight: "public/images/code-white.svg",
-    iconDark: "public/images/code-black.svg",
+    iconLight:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fcode-white.svg?alt=media&token=5ebca20d-51ce-428b-9d49-e586b30aaa5b",
+    iconDark:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fcode-black.svg?alt=media&token=a858d39f-e1d2-43e8-8215-c8115cd3dcd1",
     desc: `Builds high-quality mobile applications for Android and iOS, focusing on seamless functionality and an exceptional user experience.`,
     no: 2,
   },
   {
     name: "UI UX Design",
-    iconLight: "public/images/pen-black.svg",
-    iconDark: "public/images/pen-white.svg",
+    iconLight:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fpen-black.svg?alt=media&token=c597b81c-123f-448f-a13b-13b6ce93c9ab",
+    iconDark:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fpen-white.svg?alt=media&token=5cc48c91-08da-4824-9a30-c36322d19998",
     desc: `Designs intuitive interfaces that enhance user satisfaction, combining aesthetic appeal with functionality for a smooth navigation experience.`,
     no: 7,
   },
   {
     name: "Graphic Design",
-    iconLight: "public/images/palette-black.svg",
-    iconDark: "public/images/palette-white.svg",
+    iconLight:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fpalette-black.svg?alt=media&token=245c313d-2b78-4f60-94e0-eb0a239489b2",
+    iconDark:
+      "https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2Fpalette-white.svg?alt=media&token=eb929526-394a-4cd7-9789-22255ec1023f",
     desc: `Delivers visually compelling materials that effectively communicate a brand’s message and strengthen its visual identity.`,
     no: 7,
   },
@@ -66,11 +76,7 @@ export default function About() {
             isLightMode ? "border-gray-950" : "border-white "
           } overflow-hidden  w-[12rem] h-[12rem] mx-auto md:ml-[7vw]  md:w-[18rem] md:h-[15rem] lg:mb-10 lg:w-[24rem] lg:h-[20rem]`}
         >
-          <img
-            src="public/images/Animation design.jpeg"
-            className="w-full h-full "
-            alt=""
-          />
+          <img src={aboutData.picture1} className="w-full h-full " alt="" />
         </div>
         <div className="text-center mt-5 md:w-[60vw] md:text-left  md:mr-[20vw] md:pl-[2.5rem] lg:pl-[3.5rem] ">
           <div>
@@ -95,8 +101,8 @@ export default function About() {
         <h1 className={styleMainHeading}>Services</h1>
         <div>
           <span className="flex flex-col items-center sm:flex-row sm:justify-evenly mt-5 flex-wrap w-[90vw]">
-            {services.map((item) => (
-              <Service data={item} />
+            {services.map((item, i) => (
+              <Service data={item} key={i} />
             ))}
           </span>
         </div>

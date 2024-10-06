@@ -7,6 +7,7 @@ const heroData = {
   name: "Aswin S S",
   introduction: `UI Developer with expertise in React and Figma. I specialize in building intuitive, responsive user interfaces that offer seamless user experiences. I'm passionate about blending creativity with technology to deliver visually appealing and highly functional designs.`,
   job: "UI Developer",
+  avatar: `https://firebasestorage.googleapis.com/v0/b/my-personal-website-17644.appspot.com/o/icons%20and%20avatars%2FAvatar.jpeg?alt=media&token=6519623a-0c6f-4ff4-9b5c-2227ac524f9e`,
 };
 
 export default function HeroSection() {
@@ -21,11 +22,7 @@ export default function HeroSection() {
       }
     >
       <div className="w-[12rem] border-[0.35rem] border-white h-[12rem] mt-[10rem] mb-[1rem] mx-auto   rounded-3xl overflow-hidden md:mt-[12rem] md:mr-[7rem] md:w-[15rem] md:h-[15rem] lg:w-[17rem] lg:h-[17rem] lg:mr-[12rem]">
-        <img
-          src="/public/images/Avatar.jpeg"
-          className="w-full h-full"
-          alt=""
-        />
+        <img src={heroData.avatar} className="w-full h-full" alt="" />
       </div>
       <div
         className="flex flex-col items-center sm:items-start
