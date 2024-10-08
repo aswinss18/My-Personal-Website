@@ -1,36 +1,11 @@
-import React, { useEffect, useState } from "react";
 import ImagePortfolio from "./ImagePortfolio"; // This component renders the portfolio item
 import { useContext } from "react";
-import { collection, getDocs } from "firebase/firestore"; // Import Firestore methods
 import Button from "./Button"; // Button component for Load More feature
 import { MyContext } from "../App"; // Context for Light/Dark mode
-import { db } from "../firebase"; // Firestore configuration
-import Loader from "./Loader";
 
 export default function Portfolio() {
-  const [portfolioData, setPortfolioData] = useState([]); // State to store the collection data
-  const { loading, setLoading, isLightMode } = useContext(MyContext); // State to handle loading
-
-  useEffect(() => {
-    const fetchPortfolioData = async () => {
-      setLoading(true);
-      try {
-        const querySnapshot = await getDocs(collection(db, "portfolio")); // Fetch the whole collection
-        const items = querySnapshot.docs.map((doc) => ({
-          id: doc.id, // Each document's ID
-          ...doc.data(), // Spread operator to get all the document's fields
-        }));
-
-        setPortfolioData(items); // Set the fetched data in state
-        setLoading(false); // Set loading to false once data is fetched
-      } catch (error) {
-        console.error("Error fetching portfolio data: ", error);
-        setLoading(false); // In case of error, also set loading to false
-      }
-    };
-
-    fetchPortfolioData();
-  }, []);
+  const { loading, setLoading, isLightMode, portfolioData } =
+    useContext(MyContext); // State to handle loading
 
   // Access the light/dark mode from context
 
@@ -44,7 +19,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <div className="w-[100vw] h-auto md:h-[100vh] flex flex-col items-center relative mb-16">
+      <div className="w-[100vw] h-auto md:h-[100vh] flex flex-col items-center relative mb-16 overflow-y-scroll ">
         <h1 className="text-2xl font-bold mt-[5rem] absolute">My Works</h1>
         <div className="flex flex-col items-center md:items-start md:absolute mt-[6rem]">
           {/* Filter bar for categories */}

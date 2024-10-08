@@ -46,7 +46,7 @@ export default function Header() {
         <nav className="hidden sm:block">
           <ul className=" sm:flex font-semibold  sm:space-x-5 md:space-x-12 px-5 lg:space-x-24 text-lg">
             <li>
-              <NavLink to="/" exact activeClassName="active">
+              <NavLink to="/" activeClassName="active">
                 Home
               </NavLink>
             </li>

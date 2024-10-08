@@ -7,7 +7,7 @@ export default function Loader() {
   return (
     <div className="absolute bg-transparent w-[100vw] h-[100vh] backdrop-blur-3xl py-[50vh]">
       <div
-        class={`loader border-t-transparent border-solid mx-auto  border-4 rounded-full w-16 h-16 animate-spin ${
+        className={`loader border-t-transparent border-solid mx-auto  border-4 rounded-full w-16 h-16 animate-spin ${
           isLightMode ? ` border-gray-950` : `border-white`
         }`}
       ></div>

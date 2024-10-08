@@ -19,9 +19,11 @@ export default function Service({ data }) {
         )}
       </div>
       <div>
-        <h2 className="mt-1 font-bold text-md ">{data.name}</h2>
-        <p className="text-[12px] text-gray-500">{data.no} PROJECTS</p>
-        <p className="h-fit w-fit text-sm px-2 py-1 font-normal">{data.desc}</p>
+        <h2 className="mt-1 font-bold text-md ">{data.service}</h2>
+        <p className="text-[12px] text-gray-500">{data.number} PROJECTS</p>
+        <p className="h-fit w-fit text-sm px-2 py-1 font-normal">
+          {data.description}
+        </p>
       </div>
     </div>
   );

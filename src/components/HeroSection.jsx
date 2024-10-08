@@ -11,7 +11,7 @@ const heroData = {
 };
 
 export default function HeroSection() {
-  const { isLightMode } = useContext(MyContext);
+  const { isLightMode, personalDetails } = useContext(MyContext);
 
   return (
     <div
@@ -22,7 +22,7 @@ export default function HeroSection() {
       }
     >
       <div className="w-[12rem] border-[0.35rem] border-white h-[12rem] mt-[10rem] mb-[1rem] mx-auto   rounded-3xl overflow-hidden md:mt-[12rem] md:mr-[7rem] md:w-[15rem] md:h-[15rem] lg:w-[17rem] lg:h-[17rem] lg:mr-[12rem]">
-        <img src={heroData.avatar} className="w-full h-full" alt="" />
+        <img src={personalDetails.avatar} className="w-full h-full" alt="" />
       </div>
       <div
         className="flex flex-col items-center sm:items-start
@@ -32,12 +32,12 @@ export default function HeroSection() {
       >
         <div>
           <h1 className="text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl ">
-            I'm {heroData.name}
+            I'm {personalDetails.name}
           </h1>
         </div>
         <div>
           <h3 className="font-semibold sm:text-xl md:text-2xl lg:text-3xl ">
-            I'm a <span className="font-bold">{heroData.job} </span>
+            I'm a <span className="font-bold">{personalDetails.job} </span>
           </h3>
         </div>
         <div>
