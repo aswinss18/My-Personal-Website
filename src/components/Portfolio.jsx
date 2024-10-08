@@ -4,9 +4,8 @@ import Button from "./Button"; // Button component for Load More feature
 import { MyContext } from "../App"; // Context for Light/Dark mode
 
 export default function Portfolio() {
-  const { loading, setLoading, isLightMode, portfolioData } =
-    useContext(MyContext); // State to handle loading
-
+  const { loading, isLightMode, portfolioData } = useContext(MyContext); // State to handle loading
+  portfolioData.sort((a, b) => a.priority - b.priority);
   // Access the light/dark mode from context
 
   const styleSpan = `font-semibold transition-all duration-300 ease-in-out px-2 md:py-1 md:pl-4 md:pr-10 md:text-lg ${
