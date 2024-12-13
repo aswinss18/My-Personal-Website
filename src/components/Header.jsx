@@ -55,11 +55,7 @@ export default function Header() {
                 About
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/services" activeClassName="active">
-                Services
-              </NavLink>
-            </li>
+
             <li>
               <NavLink to="/portfolio" activeClassName="active">
                 Portfolio

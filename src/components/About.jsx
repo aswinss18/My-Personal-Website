@@ -4,6 +4,7 @@ import Button from "./Button";
 import Service from "./Service";
 import { MyContext } from "../App";
 import { Link } from "react-router-dom";
+import Skills from "./Skills";
 
 export const styleMainHeading = `text-lg font-bold md:text-xl lg:text-2xl mt-2.5`;
 export const styleParagraph = `mt-2 px-2 md:px-0 md:text-lg lg:text-xl`;
@@ -30,7 +31,7 @@ export default function About() {
           isLightMode
             ? "text-gray-950 bg-white border-gray-300"
             : "bg-gray-950 text-white border-white"
-        } sm:w-[100vw] sm:h-[85vh] h-[80vh] text-gray-950 md:flex md:items-center border-b-2 `}
+        } sm:min-w-[100vw] sm:min-h-[85vh] min-h-[80vh] text-gray-950 md:flex md:items-center border-b-2 py-10`}
       >
         <div
           className={`mt-[12vh] rounded-3xl border-[0.35rem] ${
@@ -65,6 +66,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Skills />
 
       <div className="flex flex-col items-center mt-5 mb-10">
         <h1 className={styleMainHeading}>Services</h1>

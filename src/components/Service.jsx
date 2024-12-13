@@ -7,7 +7,7 @@ export default function Service({ data }) {
 
   return (
     <div
-      className={`flex flex-col mb-5 w-[15rem] h-[15rem] mt-5 text-center rounded-3xl hover:border-gray-400  transform hover:scale-105 transition-all duration-200 border-4 border-transparent  ${
+      className={`flex flex-col mb-5 w-[15rem] h-[15rem] mt-5 text-center rounded-3xl hover:border-gray-400  transform hover:scale-105 transition-all duration-200 border-4 border-transparent   ${
         isLightMode ? " bg-gray-950 text-white" : " bg-white text-gray-900"
       }`}
     >

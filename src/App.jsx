@@ -21,7 +21,6 @@ const router = createBrowserRouter([
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
       { path: "/portfolio", element: <Portfolio /> },
-      { path: "*", element: <HeroSection /> },
     ],
   },
 ]);
@@ -72,8 +71,6 @@ function App() {
 
     fetchPortfolioData();
   }, []);
-
-  console.log(portfolioData);
 
   return (
     <MyContext.Provider
